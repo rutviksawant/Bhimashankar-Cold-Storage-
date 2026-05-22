@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* HERO SECTION */
+
+.hero {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* OVERLAY */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 20px;
+  z-index: 1;
+}
+
+/* HEADING */
+
+.overlay h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: rgb(8, 1, 1);
+
+  width: 100%;
+  max-width: 700px;
+
+  margin-bottom: 20px;
+}
+
+/* PARAGRAPH */
+
+.overlay p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: rgb(8, 1, 1);
+
+  max-width: 700px;
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+/* BUTTON CONTAINER */
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* BUTTONS */
+
+.btn-primary,
+.btn-secondary {
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: #2f80ff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1c66d6;
+}
+
+.btn-secondary {
+  background: white;
+  color: black;
+}
+
+.btn-secondary:hover {
+  background: #ddd;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .overlay {
+    padding: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 90%;
+    max-width: 300px;
+  }
+}

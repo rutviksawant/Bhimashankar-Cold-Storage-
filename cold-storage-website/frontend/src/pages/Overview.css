@@ -1,0 +1,125 @@
+.section {
+  padding: 50px 10%;
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+/* Main heading */
+.section h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0f172a;
+  position: relative;
+}
+
+.section h1::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #38bdf8;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Subheading */
+.section h2 {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 600;
+  margin: 30px 0 15px;
+  color: #020617;
+  line-height: 1.4;
+}
+
+/* Paragraph text */
+.section p {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.9;
+  color: #475569;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+/* Overview image */
+.overview-image {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 30px auto;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Feature headings */
+.section h3 {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 600;
+  color: #0f172a;
+  margin-top: 18px;
+  position: relative;
+  padding-left: 28px;
+  line-height: 1.5;
+}
+
+.section h3::before {
+  content: "❄️";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.section h3 + p {
+  margin-left: 28px;
+  font-size: clamp(0.95rem, 1.8vw, 1rem);
+  color: #475569;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .section {
+    padding: 30px 5%;
+  }
+
+  .section h1 {
+    margin-bottom: 20px;
+  }
+
+  .section h2 {
+    margin-top: 20px;
+  }
+
+  .section p {
+    text-align: left; /* better readability on mobile */
+    line-height: 1.7;
+  }
+
+  .overview-image {
+    border-radius: 10px;
+    margin: 20px auto;
+  }
+
+  .section h3 {
+    padding-left: 24px;
+  }
+
+  .section h3 + p {
+    margin-left: 24px;
+  }
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .section {
+    padding: 40px 8%;
+  }
+}
+
+/* ================= LARGE DESKTOP ================= */
+@media (min-width: 1400px) {
+  .section {
+    max-width: 1400px;
+    margin: auto;
+  }
+}

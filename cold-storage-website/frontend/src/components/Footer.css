@@ -1,0 +1,165 @@
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 60px 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2f6db3;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-column p,
+.footer-column li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  cursor: pointer;
+}
+
+.footer-column li:hover {
+  color: #5b9dff;
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  opacity: 0.9;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #5b9dff;
+}
+
+.social-icons {
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+.footer-column input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+}
+
+.footer-column button {
+  width: 100%;
+  padding: 10px;
+  background: #2f6db3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-column button:hover {
+  background: #1f4f86;
+}
+
+.no-spam {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 5px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* FOOTER NAVIGATION LINK COLOR FIX */
+
+.footer-nav a,
+.footer-nav a:visited {
+  color: #ffffff;        /* same white color */
+  text-decoration: none; /* remove underline */
+  transition: 0.3s;
+}
+
+/* Hover effect (optional) */
+.footer-nav a:hover {
+  color: #8fb3ff;        /* light blue hover like submit button */
+}
+
+/* Active NavLink color */
+.footer-nav a.active {
+  color: #ffffff;
+  font-weight: 500;
+}

@@ -1,0 +1,14 @@
+
+
+.hero {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image {
+  width: 100%;
+  display: block; /* removes inline image gap */
+  margin: 0;
+  padding: 0;
+}

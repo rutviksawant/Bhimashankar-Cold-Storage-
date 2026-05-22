@@ -1,0 +1,224 @@
+/* ================= PAGE CONTAINER ================= */
+.cold-chain-solution {
+  padding: 50px 10%;
+  background: linear-gradient(to bottom, #f8fafc, #ffffff);
+  color: #1e293b;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/* ================= HEADINGS ================= */
+.cold-chain-solution h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  color: #0f172a;
+}
+
+.cold-chain-solution h1::after {
+  content: "";
+  width: 90px;
+  height: 4px;
+  background: #38bdf8;
+  display: block;
+  margin: 14px auto 0;
+  border-radius: 2px;
+}
+
+.cold-chain-solution h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin: 30px 0 15px;
+  color: #020617;
+  line-height: 1.4;
+}
+
+.cold-chain-solution h3 {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  margin-top: 24px;
+  padding-left: 30px;
+  position: relative;
+  color: #0f172a;
+  line-height: 1.5;
+}
+
+.cold-chain-solution h3::before {
+  content: "❄️";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* ================= PARAGRAPH ================= */
+.cold-chain-solution p {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.9;
+  color: #475569;
+  text-align: justify;
+  margin-bottom: 16px;
+}
+
+/* ================= BENEFIT IMAGE GRID ================= */
+.benefit-slider-grid {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+/* Slider item */
+.slider-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Slider box */
+.slider-box {
+  width: 100%;
+  height: 280px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Slider label */
+.slider-label {
+  margin-top: 12px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 600;
+  color: #0f172a;
+  text-align: center;
+}
+
+/* ================= IMAGE ANIMATION ================= */
+.slider-1 {
+  background-image: url("../assets/harvesting-1.PNG");
+  animation: slideImages 30s infinite;
+}
+
+.slider-2 {
+  background-image: url("../assets/temperature-1.PNG");
+  animation: slideImage 30s infinite;
+}
+
+.slider-3 {
+  background-image: url("../assets/temp-1.PNG");
+  animation: slideImag 30s infinite;
+}
+
+.slider-4 {
+  background-image: url("../assets/transport-1.PNG");
+  animation: slideImg 30s infinite;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes slideImages {
+  0% {
+    background-image: url("../assets/harvesting-1.PNG");
+  }
+  33% {
+    background-image: url("../assets/harvesting-2.PNG");
+  }
+  66% {
+    background-image: url("../assets/harvesting-3.PNG");
+  }
+}
+
+@keyframes slideImage {
+  0% {
+    background-image: url("../assets/temperature-1.PNG");
+  }
+  33% {
+    background-image: url("../assets/temperature-2.PNG");
+  }
+  66% {
+    background-image: url("../assets/temperature-3.PNG");
+  }
+}
+
+@keyframes slideImag {
+  0% {
+    background-image: url("../assets/temp-1.PNG");
+  }
+  33% {
+    background-image: url("../assets/temp-2.PNG");
+  }
+  66% {
+    background-image: url("../assets/temp-3.PNG");
+  }
+}
+
+@keyframes slideImg {
+  0% {
+    background-image: url("../assets/transport-1.PNG");
+  }
+  33% {
+    background-image: url("../assets/transport-2.PNG");
+  }
+  66% {
+    background-image: url("../assets/transport-3.PNG");
+  }
+}
+
+/* ================= BENEFITS BOX ================= */
+.benefits-text {
+  background: #ecfeff;
+  border-left: 6px solid #38bdf8;
+  padding: 24px 28px;
+  border-radius: 12px;
+  font-weight: 500;
+  margin-top: 20px;
+  line-height: 2;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+  .cold-chain-solution {
+    padding: 40px 8%;
+  }
+
+  .benefit-slider-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .slider-box {
+    height: 240px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .cold-chain-solution {
+    padding: 30px 5%;
+  }
+
+  .cold-chain-solution p {
+    text-align: left; /* better readability on mobile */
+    line-height: 1.7;
+  }
+
+  .benefit-slider-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .slider-box {
+    height: 220px;
+    border-radius: 12px;
+  }
+
+  .benefits-text {
+    padding: 18px;
+    line-height: 1.8;
+  }
+}
+
+/* ================= LARGE DESKTOP ================= */
+@media (min-width: 1400px) {
+  .cold-chain-solution {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
